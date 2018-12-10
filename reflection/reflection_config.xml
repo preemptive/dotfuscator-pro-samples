@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE dotfuscator SYSTEM "http://www.preemptive.com/dotfuscator/dtd/dotfuscator_v2.5.dtd">
+<dotfuscator version="2.3">
+  <global>
+    <input_management>automatic</input_management>
+  </global>
+  <input>
+    <loadpaths />
+    <asmlist>
+      <inputassembly refid="703418e7-5020-4ee3-8d06-2bede9ca7b59">
+        <file dir="${configdir}\obj\Release" name="Reflection.exe" />
+      </inputassembly>
+    </asmlist>
+  </input>
+  <output>
+    <file dir="${configdir}\obfuscatedoutput" />
+  </output>
+  <tempdir>
+    <file dir="${configdir}\temp" />
+  </tempdir>
+  <renaming>
+    <option>explicitoverrides</option>
+    <excludelist>
+      <type name="Samples.Greetings">
+        <method name="SayGreetings" signature="void(string)" />
+      </type>
+    </excludelist>
+    <mapping>
+      <mapoutput overwrite="true">
+        <file dir="${configdir}\reports" name="Reflection_Map.xml" />
+      </mapoutput>
+    </mapping>
+    <referencerulelist />
+  </renaming>
+  <sos mergeruntime="true">
+    <option>version:v4</option>
+  </sos>
+  <smartobfuscation>
+    <smartobfuscationreport verbosity="all" overwrite="false" />
+  </smartobfuscation>
+</dotfuscator>
