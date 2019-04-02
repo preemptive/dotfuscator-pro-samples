@@ -1,0 +1,14 @@
+
+# Ignore Visual Studio Cache Files
+.vs/
+
+# Ignore binary output files
+bin/
+obj/
+
+# Ignore generated Config files
+# NOTE: You will want to check your configuration file into source control for your own project
+DotfuscatorConfig.xml
+
+# Ignore Dotfuscator Renaming output
+DotfuscatorReports/
