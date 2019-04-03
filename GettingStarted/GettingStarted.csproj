@@ -51,7 +51,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  
+
   <!-- Set build properties for Dotfuscator -->
   <PropertyGroup>
 

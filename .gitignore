@@ -12,3 +12,4 @@ DotfuscatorConfig.xml
 
 # Ignore Dotfuscator Renaming output
 DotfuscatorReports/
+reflection/reports/
