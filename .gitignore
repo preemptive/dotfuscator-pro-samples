@@ -1,0 +1,12 @@
+
+# Ignore Visual Studio Cache Files
+.vs/
+
+# Ignore binary output files
+bin/
+obj/
+
+# Ignore Dotfuscator Renaming output
+DotfuscatorReports/
+reflection/reports/
+serialization/reports/
