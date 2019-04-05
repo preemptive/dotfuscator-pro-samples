@@ -5,18 +5,18 @@ The application uses a basic web service with an HTML UI and functions as a basi
 
 ## Building the Sample
 
-Open the Developer Command Prompt for VS 2017 and navigate to the sample directory.
+Open the Developer Command Prompt for Visual Studio and navigate to the sample directory.
 
 To build the project enter the commands:
 
     dotnet restore
     msbuild EchoApp.csproj /p:Configuration=Release /t:Publish
 
-The published app is placed in `bin\Release\netcoreapp1.1\publish`.
+The published app is placed in `bin\Release\netcoreapp2.0\publish`.
 
 ## Running the Sample
 
-Run the sample by opening a command prompt in `bin/Release/netcoreapp1.1/publish` and enter:
+Run the sample by opening a command prompt in `bin\Release\netcoreapp2.0\publish` and enter:
 
     dotnet EchoApp.dll
 
