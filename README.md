@@ -1,6 +1,6 @@
-# PreEmptive Protection - Dotfuscator Professional Samples
+# PreEmptive Protection Dotfuscator Professional Samples
 
-This repo contains samples that demonstrate configuring [PreEmptive Protection - Dotfuscator Professional](https://www.preemptive.com/products/dotfuscator/overview) for various types of .NET applications. 
+This repo contains samples that demonstrate configuring [PreEmptive Protection Dotfuscator Professional](https://www.preemptive.com/products/dotfuscator/overview) for various types of .NET applications. 
 The samples in this repo are each organized into their own directory.
 For sample-specific instructions, refer to the the README in each sample's directory.
 
