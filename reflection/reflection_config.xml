@@ -6,10 +6,16 @@
     <input_management>automatic</input_management>
   </global>
   <input>
-    <loadpaths />
+    <loadpaths>
+      <file dir="${configdir}/bin/Release/net6.0" />
+    </loadpaths>
     <asmlist>
-      <inputassembly refid="703418e7-5020-4ee3-8d06-2bede9ca7b59">
-        <file dir="${configdir}\obj\Release" name="Reflection.exe" />
+      <inputassembly refid="a5618321-1c91-4b11-913f-bcb0d6e791d4">
+        <option>honoroas</option>
+        <option>stripoa</option>
+        <option>library</option>
+        <option>transformxaml</option>
+        <file dir="${configdir}\obj\Release\net6.0" name="Reflection.dll" />
       </inputassembly>
     </asmlist>
   </input>
@@ -20,7 +26,6 @@
     <file dir="${configdir}\temp" />
   </tempdir>
   <renaming>
-    <option>explicitoverrides</option>
     <excludelist>
       <type name="Samples.Greetings">
         <method name="SayGreetings" signature="void(string)" />

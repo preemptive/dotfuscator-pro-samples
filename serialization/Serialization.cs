@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -11,7 +11,7 @@ namespace Samples
         static void Main(string[] args)
         {
             Serialization test = new Serialization();
-            if((args.Length == 0) || (!args[0].Equals("-s") && !args[0].Equals("-d")))
+            if ((args.Length == 0) || (!args[0].Equals("-s") && !args[0].Equals("-d")))
             {
                 Console.WriteLine("Usage : Serialization -option\n" +
                     "where option can be \n" +
@@ -24,7 +24,7 @@ namespace Samples
 
         public void DoIt(string option)
         {
-            if(option.Equals("-s"))
+            if (option.Equals("-s"))
             {
                 Console.Write("Serializing...");
                 Tester testernew = new Tester(1, 10);
@@ -78,7 +78,7 @@ namespace Samples
             {
                 stream = new FileStream("Sum.out", FileMode.Open);
                 BinaryFormatter formatter = new BinaryFormatter();
-                return (Tester) formatter.Deserialize(stream);
+                return (Tester)formatter.Deserialize(stream);
             }
             finally
             {
