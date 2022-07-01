@@ -6,10 +6,16 @@
     <input_management>automatic</input_management>
   </global>
   <input>
-    <loadpaths />
+    <loadpaths>
+      <file dir="${configdir}/bin/Release/net6.0" />
+    </loadpaths>
     <asmlist>
-      <inputassembly refid="9283a3aa-2b14-4ff6-b54a-a24e8097b8de">
-        <file dir="${configdir}\obj\Release" name="Serialization.exe" />
+      <inputassembly refid="65b1a278-c849-4c86-9119-f36cab90972d">
+        <option>honoroas</option>
+        <option>stripoa</option>
+        <option>library</option>
+        <option>transformxaml</option>
+        <file dir="${configdir}\obj\Release\net6.0" name="Serialization.dll" />
       </inputassembly>
     </asmlist>
   </input>
@@ -20,7 +26,6 @@
     <file dir="${configdir}\temp" />
   </tempdir>
   <renaming>
-    <option>explicitoverrides</option>
     <excludelist>
       <type name="Samples.Tester">
         <field name=".*" regex="true" />

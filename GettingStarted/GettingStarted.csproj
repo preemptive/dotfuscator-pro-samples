@@ -1,63 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
-  <PropertyGroup>
-    <ProjectGuid>{61141884-4A8A-41FA-B7C6-AB84EF715212}</ProjectGuid>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <AssemblyName>GettingStarted</AssemblyName>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>GettingStarted</RootNamespace>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugSymbols>true</DebugSymbols>
-    <FileAlignment>4096</FileAlignment>
-    <Optimize>false</Optimize>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <DebugSymbols>false</DebugSymbols>
-    <FileAlignment>4096</FileAlignment>
-    <Optimize>true</Optimize>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System">
-      <Name>System</Name>
-    </Reference>
-    <Reference Include="System.Data">
-      <Name>System.Data</Name>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <Name>System.Drawing</Name>
-    </Reference>
-    <Reference Include="System.Windows.Forms">
-      <Name>System.Windows.Forms</Name>
-    </Reference>
-    <Reference Include="System.XML">
-      <Name>System.XML</Name>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="HelloWorldForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <EmbeddedResource Include="HelloWorldForm.resx">
-      <DependentUpon>HelloWorldForm.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+﻿<Project>
 
+  <!-- Import SDK properties (before any existing tags) -->
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+	
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+	
+  <!-- Import SDK targets (after any existing tags but before Dotfuscator targets) -->
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+	
   <!-- Set build properties for Dotfuscator -->
   <PropertyGroup>
 
@@ -76,5 +32,5 @@
   
   <!-- Import the Dotfuscator MSBuild targets last -->
   <Import Project="$(DotfuscatorMSBuildDir)\PreEmptive.Dotfuscator.Common.targets" />
-
+ 	
 </Project>

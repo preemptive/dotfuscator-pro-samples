@@ -12,22 +12,18 @@ To build the project enter the commands:
     dotnet restore
     msbuild EchoApp.csproj /p:Configuration=Release /t:Publish
 
-The published app is placed in `bin\Release\netcoreapp2.0\publish`.
+The published app is placed in `bin\Release\net6.0\publish`.
 
 ## Running the Sample
 
-Run the sample by opening a command prompt in `bin\Release\netcoreapp2.0\publish` and enter:
+Run the sample by opening a command prompt in `bin\Release\net6.0\publish` and enter:
 
     dotnet EchoApp.dll
 
 You should see:
 
-    dbug: Microsoft.AspNetCore.Hosting.Internal.WebHost[3]
-          Hosting starting
-    dbug: Microsoft.AspNetCore.Hosting.Internal.WebHost[4]
-          Hosting started
     Hosting environment: Production
-    Content root path: $(PathToFolder)\bin\Release\netcoreapp1.1\publish
+    Content root path: $(PathToFolder)\bin\Release\net6.0\publish
     Now listening on: http://localhost:5050
     Application started. Press Ctrl+C to shut down.
 

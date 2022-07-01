@@ -19,17 +19,17 @@ namespace GettingStarted
         /// </summary>
         private System.ComponentModel.Container components = null;
 
-    public HelloWorldForm()
-    {
-        //
-        // Required for Windows Form Designer support
-        //
-        InitializeComponent();
+        public HelloWorldForm()
+        {
+            //
+            // Required for Windows Form Designer support
+            //
+            InitializeComponent();
 
-        //
-        // TODO: Add any constructor code after InitializeComponent call
-        //
-    }
+            //
+            // TODO: Add any constructor code after InitializeComponent call
+            //
+        }
 
         /// <summary>
         /// Clean up any resources being used.
@@ -38,12 +38,12 @@ namespace GettingStarted
         {
             if (disposing)
             {
-                if (components != null) 
+                if (components != null)
                 {
                     components.Dispose();
                 }
             }
-            base.Dispose( disposing );
+            base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
@@ -133,7 +133,7 @@ namespace GettingStarted
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main() 
+        static void Main()
         {
             Application.Run(new HelloWorldForm());
         }
@@ -142,18 +142,18 @@ namespace GettingStarted
         {
         }
 
-        private void Converse(string name1, string name2) 
+        private void Converse(string name1, string name2)
         {
-            Friendly friend1 = new Friendly( name1 );
-            Friendly friend2 = new Friendly( name2 );
+            Friendly friend1 = new Friendly(name1);
+            Friendly friend2 = new Friendly(name2);
 
             ConversationTextBox.AppendText(friend1.SayHello());
             ConversationTextBox.AppendText(friend2.SayHello());
 
             ConversationTextBox.AppendText(friend1.Count(20));
 
-            ConversationTextBox.AppendText(friend1.SayGoodbye( friend2.Name ));
-            ConversationTextBox.AppendText(friend2.SayGoodbye( friend1.Name ));
+            ConversationTextBox.AppendText(friend1.SayGoodbye(friend2.Name));
+            ConversationTextBox.AppendText(friend2.SayGoodbye(friend1.Name));
         }
 
         private void ConverseButton_Click(object sender, EventArgs e)
@@ -162,7 +162,7 @@ namespace GettingStarted
         }
     }
 
-    class Friendly 
+    class Friendly
     {
         private string myName;
 
@@ -171,12 +171,12 @@ namespace GettingStarted
             myName = name;
         }
 
-        public String SayHello() 
+        public String SayHello()
         {
             return String.Concat("Hello, my name is ", myName, "\r\n");
         }
 
-        public String SaySomething() 
+        public String SaySomething()
         {
             return "You look nice today\r\n";
         }
@@ -199,13 +199,13 @@ namespace GettingStarted
             return String.Concat("Goodbye ", othername, "\r\n");
         }
 
-        public string Name 
+        public string Name
         {
-            get 
+            get
             {
                 return myName;
             }
-            set 
+            set
             {
                 value = myName;
             }
