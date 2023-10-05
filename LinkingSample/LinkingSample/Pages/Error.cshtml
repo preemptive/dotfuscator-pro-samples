@@ -1,0 +1,12 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+<div class="text-center">
+    <h1 class="text-danger">Login Failed</h1>
+    <br />
+    <h3 class="text-black">Incorrect username or password</h3>
+    <br />
+    <button onclick="window.location.href = '@Url.Page("/Index")'" >Go Back</button>
+</div>
