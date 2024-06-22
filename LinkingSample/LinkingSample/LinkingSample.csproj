@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Authenticate\Authenticate.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!-- Set a default value for the DotfuscatorMSBuildDir property -->
+    <DotfuscatorMSBuildDir Condition="'$(DotfuscatorMSBuildDir)' == ''">$(MSBuildProgramFiles32)/MSBuild/PreEmptive/Dotfuscator/6</DotfuscatorMSBuildDir>
+  </PropertyGroup>
+
+  <!-- Reference the Dotfuscate task using the DotfuscatorMSBuildDir property -->
+  <UsingTask TaskName="PreEmptive.Tasks.Dotfuscate"
+             AssemblyFile="$(DotfuscatorMSBuildDir)/PreEmptive.Dotfuscator.Tasks.dll" />
+
+  <!-- Use the Dotfuscate task -->
+  <Target Name="RunDotfuscator" AfterTargets="Build">
+    <!-- Provide path to the dotfuscator configuration file -->
+    <Dotfuscate ConfigPath="DotfuscatorConfig.xml" OutputDirectory="$(OutDir)\Dotfuscated" License="$(DotfuscatorLicense)" />
+  </Target>
+
+</Project>
