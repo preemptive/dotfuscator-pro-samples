@@ -6,7 +6,9 @@
     <input_management>automatic</input_management>
   </global>
   <input>
-    <loadpaths />
+    <loadpaths>
+      <file dir="${configdir}/bin/Release" />
+    </loadpaths>
     <asmlist>
       <inputassembly refid="703418e7-5020-4ee3-8d06-2bede9ca7b59">
         <file dir="${configdir}\obj\Release" name="Reflection.exe" />
@@ -20,7 +22,6 @@
     <file dir="${configdir}\temp" />
   </tempdir>
   <renaming>
-    <option>explicitoverrides</option>
     <excludelist>
       <type name="Samples.Greetings">
         <method name="SayGreetings" signature="void(string)" />
