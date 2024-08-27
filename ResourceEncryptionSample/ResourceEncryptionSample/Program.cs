@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Resources;
 
-namespace ResourceEncriptionSample
+namespace ResourceEncryptionSample
 {
     class Program
     {
@@ -13,7 +13,7 @@ namespace ResourceEncriptionSample
             System.Reflection.Assembly asm = System.Reflection.Assembly.GetExecutingAssembly();
 
             Console.WriteLine("---------Resource Manager---------\n");
-            ResourceManager rm = new ResourceManager("ResourceEncriptionSample.Resource1", asm);
+            ResourceManager rm = new ResourceManager("ResourceEncryptionSample.Resource1", asm);
             string b = rm.GetString("String1");
             Console.WriteLine("String1 " + b + "\n");
 
@@ -36,7 +36,7 @@ namespace ResourceEncriptionSample
                 }
             }
             Console.WriteLine("------HERE--------\n");
-            using (var stream = asm.GetManifestResourceStream("ResourceEncriptionSample.Resource1.resources"))
+            using (var stream = asm.GetManifestResourceStream("ResourceEncryptionSample.Resource1.resources"))
             {
                 if (stream != null)
                 {
@@ -53,7 +53,7 @@ namespace ResourceEncriptionSample
             }
             Console.WriteLine("--------------\n");
 
-            using (var stream = asm.GetManifestResourceStream("ResourceEncriptionSample.Resource1.resources"))
+            using (var stream = asm.GetManifestResourceStream("ResourceEncryptionSample.Resource1.resources"))
             {
                 if (stream != null)
                 {

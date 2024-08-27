@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ResourceEncriptionSample
+namespace ResourceEncryptionSample
 {
 #pragma warning disable CA1010
     public class CRReader : IResourceReader

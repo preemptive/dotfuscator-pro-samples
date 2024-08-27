@@ -16,7 +16,7 @@
         <option>honoroas</option>
         <option>stripoa</option>
         <option>transformxaml</option>
-        <file dir="${configdir}\obj\Release\net6.0" name="ResourceEncriptionSample.dll" />
+        <file dir="${configdir}\obj\Release\net6.0" name="ResourceEncryptionSample.dll" />
       </inputassembly>
     </asmlist>
   </input>
@@ -44,7 +44,7 @@
   <controlflow level="high" />
   <resourceencrypt>
     <includelist>
-      <type name="ResourceEncriptionSample.Resource1">
+      <type name="ResourceEncryptionSample.Resource1">
         <propertymember name="Culture" />
         <propertymember name="ResourceManager" />
         <propertymember name="String1" />

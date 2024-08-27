@@ -1,7 +1,7 @@
 # Resource Encryption Sample
 
 
-The Resource Encryption Sample demostrates resource file data which contains string, icon, image type data. If we are using resource file in application then anyone can get the code from it's exe by using reverse engineeting technique using ILSPY like tool.
+The Resource Encryption Sample demonstrates resource file data which contains string, icon, image type data. If we are using resource file in application then anyone can get the code from it's exe by using reverse engineeting technique using ILSPY like tool.
 
 
 ## Building the Resource Encryption Sample
@@ -11,7 +11,7 @@ The resource encryption sample can be built from Visual Studio or by running `ms
 
 ## Running the Resource Encryption Sample
 
-The resource encryption sample can be run by executing the `ResourceEncriptionSample.exe` assembly produced by the build. The resource encryption program dynamically loads a `Resource1.resx` class properties from the current assembly with the following code:
+The resource encryption sample can be run by executing the `ResourceEncryptionSample.exe` assembly produced by the build. The resource encryption program dynamically loads a `Resource1.resx` class properties from the current assembly with the following code:
 
 	
 	Console.WriteLine("---------Resource Set---------\n");
@@ -60,16 +60,16 @@ Above lines of code print all the properties of `Resource1.resx` class one by on
 	System.Byte[]
 	
 	
-## Dotfuscating the ResourceEncrytion Output
+## Dotfuscating the ResourceEncryption Output
 
-The resourceencryption sample contains a sample Dotfuscator config file that demonstrates using resourceencrypt rules to include these properties by resourceencryption. This file is named `ResourceEncriptionSample\DotfuscatorConfig.xml` and can be located in the same directory as the rest of the resourceencryption samples. The section of the file that include these references is:
+The resourceencryption sample contains a sample Dotfuscator config file that demonstrates using resourceencrypt rules to include these properties by resourceencryption. This file is named `ResourceEncryptionSample\DotfuscatorConfig.xml` and can be located in the same directory as the rest of the resourceencryption samples. The section of the file that include these references is:
 
 Using resourceencrypt Rules to include all the properties Invoked by ResourceEncryption:
 
 	
 	<resourceencrypt>
 		<includelist>
-		<type name="ResourceEncriptionSample.Resource1">
+		<type name="ResourceEncryptionSample.Resource1">
 			<propertymember name="Culture" />
 			<propertymember name="ResourceManager" />
 			<propertymember name="String1" />
@@ -84,9 +84,9 @@ Using resourceencrypt Rules to include all the properties Invoked by ResourceEnc
 	
 The `<resourceencrypt>` tag indicates that all the includelist propertmember items must be encrypted.
 
-The `<includelist>` tag defines a list of propertymembers that must be encrypted from the resourceencryption process. The `<type name="ResourceEncriptionSample.Resource1">` tag instructs Dotfuscator to include the class name `ResourceEncriptionSample.Resource1` from the resource encryption process. Note that this only refers to the class name itself. All fields belonging to the Resource1 class are still eligible to be encrypted.
+The `<includelist>` tag defines a list of propertymembers that must be encrypted from the resourceencryption process. The `<type name="ResourceEncryptionSample.Resource1">` tag instructs Dotfuscator to include the class name `ResourceEncryptionSample.Resource1` from the resource encryption process. Note that this only refers to the class name itself. All fields belonging to the Resource1 class are still eligible to be encrypted.
 
-Building the `ResourceEncriptionSample.csproj` file with MSBuild in the `Release` configuration will run Dotfuscator with this config file, resulting in an obfuscated output in the `bin\Release` subdirectory.
+Building the `ResourceEncryptionSample.csproj` file with MSBuild in the `Release` configuration will run Dotfuscator with this config file, resulting in an obfuscated output in the `bin\Release` subdirectory.
 
 Running the new assembly verifies that Dotfuscator correctly included the required items from the resource encryption process.
 
@@ -106,4 +106,4 @@ Once you've saved your changes to the config file (e.g., with the File -> Save c
 
 ## Summary of the Resource Enryption Sample
 
-In order for you to successfully obfuscate an application that have resource file/files, change the settings of `Disable Resource Encrption` fetaure from `Yes` to `No` and select the appropriate resource file/files from the Resource Encryption tab. Dotfuscator provides a fine-grained, rule based facility for doing this.
+In order for you to successfully obfuscate an application that have resource file/files, change the settings of `Disable Resource Encryption` fetaure from `Yes` to `No` and select the appropriate resource file/files from the Resource Encryption tab. Dotfuscator provides a fine-grained, rule based facility for doing this.

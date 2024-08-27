@@ -8,7 +8,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ResourceEncriptionSample
+namespace ResourceEncryptionSample
 {
     public class CRManager : ResourceManager
     {
