@@ -12,7 +12,7 @@
       <file dir="${configdir}/bin/Release/net6.0" />
     </loadpaths>
     <asmlist>
-      <inputassembly refid="f68d6732-fb97-4468-b5f0-489196ebac9f">
+      <inputassembly refid="8a8b740b-72f7-4eaf-861d-b84c5883b61e">
         <option>honoroas</option>
         <option>stripoa</option>
         <option>transformxaml</option>

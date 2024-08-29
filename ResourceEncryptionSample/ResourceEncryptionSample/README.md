@@ -62,7 +62,7 @@ Above lines of code print all the properties of `Resource1.resx` class one by on
 	
 ## Dotfuscating the ResourceEncryption Output
 
-The resourceencryption sample contains a sample Dotfuscator config file that demonstrates using resourceencrypt rules to include these properties by resourceencryption. This file is named `ResourceEncryptionSample\DotfuscatorConfig.xml` and can be located in the same directory as the rest of the resourceencryption samples. The section of the file that include these references is:
+The resourceencryption sample contains a sample resourceencryption_config config file that demonstrates using resourceencrypt rules to include these properties by resourceencryption. This file is named `ResourceEncryptionSample\resourceencryption_config.xml` and can be located in the same directory as the rest of the resourceencryption samples. The section of the file that include these references is:
 
 Using resourceencrypt Rules to include all the properties Invoked by ResourceEncryption:
 
@@ -93,7 +93,7 @@ Running the new assembly verifies that Dotfuscator correctly included the requir
 
 ## Configuring the Resource Encryption Sample with the Config Editor
 
-The Dotfuscator Config Editor provides a visual means to produce a config file. Run the Dotfuscator Config Editor from the Start Menu and navigate to the `DotfuscatorConfig.xml` file via the File -> Open menu. First change the `Disable Resource Encrption` fetaure from `Yes` to `No` under the settings tab options section: 
+The Dotfuscator Config Editor provides a visual means to produce a config file. Run the Dotfuscator Config Editor from the Start Menu and navigate to the `resourceencryption_config.xml` file via the File -> Open menu. First change the `Disable Resource Encrption` fetaure from `Yes` to `No` under the settings tab options section: 
 
 ![](img/SettingsTab.png)
 

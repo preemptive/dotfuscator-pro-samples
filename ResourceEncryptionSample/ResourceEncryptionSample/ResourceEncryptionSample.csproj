@@ -39,6 +39,9 @@
   <!-- Set build properties for Dotfuscator. -->
   <PropertyGroup>
 
+    <!-- Set DotfuscatorConfigPath to an existing config file (resourceencryption_config.xml) -->
+    <DotfuscatorConfigPath>$(MSBuildProjectDirectory)\resourceencryption_config.xml</DotfuscatorConfigPath>
+    
     <!-- Specify the location of the MSBuild targets, if not already provided. -->
     <DotfuscatorMSBuildDir Condition="'$(DotfuscatorMSBuildDir)' == ''">$(MSBuildProgramFiles32)/MSBuild/PreEmptive/Dotfuscator/7</DotfuscatorMSBuildDir>
     <!--<DotfuscatorMSBuildDir Condition="'$(DotfuscatorMSBuildDir)' == ''">C:\Projects\PreEmptive\Dotfuscator\Dotfuscator\Source\msbuildtasks\bin\Pro\Debug\net472</DotfuscatorMSBuildDir>-->
