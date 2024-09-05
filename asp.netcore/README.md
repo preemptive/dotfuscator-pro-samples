@@ -53,4 +53,6 @@ Once done testing the sample, shut down the service by typing Ctrl+C in the comm
 
 To review the obfuscation applied to the `EchoApp.dll` file follow the instructions on the [Reverse Engineering](https://www.preemptive.com/dotfuscator/pro/userguide/en/protection_reverse_engineering.html) page.
 
+## Build with Azure Pipelines
 
+The project is built and protected by Dotfuscator Professional on Azure Pipelines. Check out the [azure-pipelines.yml](https://github.com/preemptive/dotfuscator-pro-samples/blob/master/asp.netcore/azure-pipelines.yml) file to see how it is configured and head to the [Dotfuscator Professional User Guide](https://www.preemptive.com/dotfuscator/pro/userguide/en/installation_build_agents.html) for additional details. 
