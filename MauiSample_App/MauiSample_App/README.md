@@ -1,3 +1,9 @@
+
+## About RRE-1211 Tickect
+
+Description
+The MAUI Sample App is missing from our GitHub repository: [https://github.com/preemptive/dotfuscator-pro-samples/tree/master/MauiApp1 ] This was previously available, but the link now yields a 404 error.
+
 ## MAUI App Sample - Homepage to TabbedPage
 
 This is a sample .NET MAUI application that demonstrates basic navigation from a homepage to a `TabbedPage`. The `TabbedPage` contains three tabs, each displaying different content. This sample is intended to provide a starting point for developers building mobile applications with .NET MAUI.
@@ -11,8 +17,8 @@ The MAUI APP sample can be built from Visual Studio or by running `msbuild` in t
 
 ## Features
 
-- **Resource Files:** Demonstrates the use of resource files (`.resx`) for managing strings and images in a MAUI app.
-- **Properties and Methods:** Example of using properties and methods that interact with the resource data.
+
+- **Properties,String and Methods:** Example of using Strings and methods that binds the data to Lables in TabbedPageDemo.Xaml.
 - **Security Considerations:** Discusses the potential risks of reverse engineering .NET assemblies using tools like ILSpy and dnSpy.
 
 ## Requirements
@@ -46,7 +52,9 @@ Tab2: Display the content for the Second Tab.
 Tab3: Display the content for the Third Tab.
 
 ## Code Overview
-Home Page (MainPage.xaml)
+
+## Home Page (MainPage.xaml)
+```
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -83,10 +91,10 @@ Home Page (MainPage.xaml)
     </ScrollView>
 
 </ContentPage>
-
+```
 
 ## Button Click Event (MainPage.xaml.cs)
-
+```
 namespace MauiSample_App
 {
     public partial class MainPage : ContentPage
@@ -107,9 +115,10 @@ namespace MauiSample_App
     }
 
 }
+```
+## App.Xaml 
 
-## App.Xaml
-
+```
 <?xml version = "1.0" encoding = "UTF-8" ?>
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -124,9 +133,10 @@ namespace MauiSample_App
         </ResourceDictionary>
     </Application.Resources>
 </Application>
-
+```
 ## App.Xaml.cs
 
+```
 namespace MauiApp3
 {
     public partial class App : Application
@@ -143,9 +153,9 @@ namespace MauiApp3
         }
     }
 }
-
+```
 ## TabbedPageDemo(TabbedPageDemo.Xaml)
-
+```
 <?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -167,11 +177,10 @@ namespace MauiApp3
 
 </TabbedPage>
 
-
+```
 ## TabbedPageDemo(TabbedPageDemo.Xaml.cs)
 
-
-
+```
 namespace MauiSample_App;
 
 public partial class TabbedPageDemo : TabbedPage
@@ -213,7 +222,7 @@ public partial class TabbedPageDemo : TabbedPage
     
 
 }
-
+```
 
 ## Configuring the Resource Encryption Sample with the Config Editor
 
