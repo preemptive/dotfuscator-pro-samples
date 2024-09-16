@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSample_App.TabbedPageDemo"
+             Title="TabbedPageDemo"
+            BarBackground="Green"
+            BarTextColor="white"
+            SelectedTabColor="Red"
+            UnselectedTabColor="Orange">
+    <ContentPage Title="Tab1" IconImageSource="dotnet_bot.png">
+        <Label Text="This is Tab 1 " x:Name="lblT1"></Label>
+    </ContentPage>
+    <ContentPage Title="Tab2" IconImageSource="dotnet_bot.png">
+        <Label Text="This is Tab 2 " x:Name="lblT2"></Label>
+    </ContentPage>
+    <ContentPage Title="Tab3" IconImageSource="dotnet_bot.png">
+        <Label Text="This is Tab 3 " x:Name="lblT3"></Label>
+    </ContentPage>
+
+</TabbedPage>
